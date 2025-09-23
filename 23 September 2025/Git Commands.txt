@@ -1,0 +1,16 @@
+GIT                                COMMANDS
+1. git init-                      Initialize a new git repository in current folder
+2.git clone <url> -               Clone a remote repository to your machine
+3.git status –                    Show status of changes 
+4.git add <file>-                 Stage a file for a commit
+5.git commit -m “Commit message”- Commit staged changes with a message 
+6.git branch –                    List branches
+7.git log –                       View commit history
+8.git merge <branch>-             merge a branch into current branch
+9.git checkout<branch> -          Switch to a branch
+10.git push origin<branch>-       push changes 
+11.git pull-                      Fetch and merge changes from remote
+12.git stash –                    Save uncommitted changes
+13git pull origin <branch>-       Pull changes from a specific remote branch 
+14.git fetch origin –             Fetch changes from the origin remote 
+
