@@ -19,5 +19,4 @@ EXAMPLE- Google Cloud
 • It is highly scalable to suit the small, mid and enterprise level business
 • There is no requirement about technicalities company handles everything.
 • You access the software through a web browser or app, usually paying a subscription fee.
-
 EXAMPLE - Zoom
