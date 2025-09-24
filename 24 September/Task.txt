@@ -1,4 +1,4 @@
-#Task:   “Build & Judge a Mini AI”
+Task:   “Build & Judge a Mini AI”
 
 
 Part 1 — Chronology of AI
