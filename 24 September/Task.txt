@@ -1,1 +1,43 @@
+Task:         “Build & Judge a Mini AI”
+Part 1 — Chronology of AI
+Write one real-world example for each stage:
+Machine Learning →
+Deep Learning →
+Computer Vision →
+NLP →
+LLMs →
 
+Part 2 — Deep Learning Architectures
+Match the model to the use case:
+1. RNN
+2. LSTM
+3. CNN
+4. Transformer
+Use cases:
+Image recognition
+Text translation (old Google Translate)
+Predicting the next word in ChatGPT
+Early speech-to-text systems
+
+Part 3 — Frameworks
+Choose one framework (PyTorch / TensorFlow / Keras).
+In one sentence, explain why you would use it if you were a student making a
+cat-vs-dog classifier.
+Part 4 — Evaluation Metrics
+Imagine you built a spam filter. Answer:
+Precision: If it marks 10 emails as spam and 7 are truly spam → what’s
+Precision?
+Recall: If there were 12 spam emails in total, how many did it catch?
+(use same example)
+F1 Score: Use the formula and calculate (round to 2 decimals).
+MSE/MAE: Predict your friend’s age (actual = 15, prediction = 18). Which
+metric punishes the error more?
+BLEU/ROUGE: AI translated “The cat sat on the mat” as “Cat is on the
+mat.” Which metric (BLEU/ROUGE) do you think would give a high score?
+
+Part 5 — Responsible AI & Explainability
+You built an AI that predicts loan approvals.
+A customer asks, “Why was my loan rejected?”
+
+Write one simple way to explain the decision fairly (e.g., “Your income was too
+low compared to the loan size”).
