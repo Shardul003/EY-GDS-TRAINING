@@ -1,1 +1,23 @@
+•	IaaS (Infrastructure as a Service): 
+• IaaS is like renting virtual computers and storage space in the cloud.
+• You have control over the operating systems, applications, and development frameworks.
+• Scaling resources up or down is easy based on your needs.
+•	It requires technical knowledge.
+EXAMPLE- Microsoft Azure
 
+
+•	PaaS (Platform as a Service): 
+•	PaaS is like a toolkit for developers to build and deploy applications without worrying about infrastructure.
+•	Provides pre-built tools, libraries, and development environments.
+•	Developers focus on building and managing applications, while the provider handles infrastructure management.
+• Some knowledge is required for the basic setup.	
+EXAMPLE- Google Cloud
+
+
+•	SaaS (Software as a Service):
+• SaaS is ideal for businesses that needs ready-to-use software for communication or data management.
+• It is highly scalable to suit the small, mid and enterprise level business
+• There is no requirement about technicalities company handles everything.
+• You access the software through a web browser or app, usually paying a subscription fee.
+
+EXAMPLE - Zoom
