@@ -1,1 +1,67 @@
+TYPES OF MODELS:
+
+1.	STATISTICAL MODELS
+
+Linear Regression – 
+•	Supervised Machine Learning Algorithm used for regression.
+•	Works well with linearly related data.
+•	Predicts Continuous values.
+•	Uses Straight line 
+•	Sensitive to outliers.
+•	Not suitable for non linear relationship.
+•	In this we predict dependent variables(target) from independent variables(Input variable)
+•	Regression line y=b0+b1x
+ 		 B0-Intercept
+B1- slope
+Evaluation – MSE (Mean Squared Error)
+                           MAE (Mean Absolute Error)
+                            R2(Coefficient of Determination)
+Example-House Price Prediction
+
+Logistic Regression – 
+•	Supervised Machine Learning Algorithm used for classification not regression.
+•	Predicts Categorical values(dependent variable).
+•	Uses Sigmoid Curve.
+•	Sigmoid Function – Converts value between 0 and 1
+•	If probability>0.5(threshold)=Predict class 1
+•	If probability<0.5(threshold)=Predict class 2
+•	Evaluation metrics 
+Accuracy, Precision, Recall, F1- Score, ROC curve & Area under Curve
+•	Sensitive to outlier
+
+2. MACHINE LEARNING MODELS
+
+Decision Trees
+•	Supervised Machine Learning Algorithm used for classification and Regression.
+•	Splits data into branches based on certain conditions, ending in decisions(leaves).
+•	Root Node(First split)
+•	Decision Node(Intermediate Splits based on condition)
+•	Leaf Node(Final Outcomes)
+•	Splits are made to group data together.
+•	Process continues until stopping criteria is met.
+•	Can easily overfit.
+•	EXAMPLE- LOAN APPROVAL SYSTEM.
+
+Random Forests 
+•	Ensemble Learning method, Combine many decision trees to make better predictions.
+•	Used for both classification and regression.
+•	Create multiple decision trees using random subsets of training data.
+•	At each split in a tree, only a random subsets of features is considered.
+•	For Classification – Each tree votes for a class, majority wins
+•	For Regression- Predictions are averaged.
+•	Robust to noise and missing values.
+•	Needs tuning(no of trees, depth) 
+EXAMPLE- Predicting if a customer will buy a product or not
+
+SVM(Support Vector Machine)
+•	Supervised Machine Learning Algorithm.
+•	Used for both Classification and Regression.
+•	Finds best separating boundary Hyperplane.
+•	Data point closest to boundary most important because they define the margin.
+•	Kernel- Separates non linearly separated data into linearly separated by projecting into higher dimensions.
+•	Common Kernel- Linear, Polynomial, RBF, Sigmoid
+•	For non linear data it uses Kernels 
+•	EXAMPLE- EMAIL SPAM DETECTION
+
+
 
