@@ -1,1 +1,56 @@
+SQL- 
+•	Structured Query Language
+•	High level Language 
+•	They are Relational Databases where data is stored in structured tables (rows and columns).
+•	They have fixed Schema.
+•	Strong ACID Support.
+•	Best for structured data.
+Example- MySQL, PostgreSQL
+
+NoSQL
+•	Not Only SQL databases
+•	They are non relational databases used to store unstructured and semistructured , or rapidly changing data.
+•	They have flexible schema.
+•	Each NoSQL Database has its own way (not standard SQL)
+•	Used for big/varied data.
+Example- MongoDB(document-based), Cassandra(column based)
+
+What are Scenario in which I need to choose one over other?
+
+When to choose SQL
+1.Strong Consistency Required.
+•	Banking System, Inventory Management
+2.Structured data with fixed Schema 
+•	Employee records, Student Databases
+3. Complex queries and relationships
+•	Reporting dashboards using joins.
+•	Airline Reservation system
+4. Transactional Systems (ACID properties needed )
+•	ATM Withdrawals
+
+When to choose NoSQL
+1.	Handling large scale or big data 
+•	Social media apps 
+•	Iot devices generating continuous sensor data
+2.	Unstructured or semistructured data 
+•	Json logs, chat messages
+3.	High Scalability and Performance
+•	Ecommerce, Gaming Leaderboards(real time updates)
+4.	Graph Relationships
+•	Recommendation engines
+
+Advantages of SQL and NoSQL
+
+SQL
+1.	Structured and organized
+2.	Strong consistency( ACID Properties)
+3.	Standardized Query Language
+4.	Data Relationship
+5.	Security and Access Control
+NoSQL
+1.	High Scalability
+2.	Less Schema 
+3.	Faster performance for big data
+4.	Variety of data models 
+5.	Cost effectiveness for scale
 
