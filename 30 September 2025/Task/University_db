@@ -20,3 +20,45 @@ BEGIN
     END$$
 DELIMITER ;
 CALL StudentsFromCity('Delhi');
+
+
+TASK 2 :
+
+
+DELIMITER $$
+CREATE PROCEDURE StudentswithCourses()
+BEGIN
+	SELECT s.student_id, s.name, c.course_name
+    FROM Students s
+    JOIN enrollments e ON s.student_id=e.student_id
+    JOIN courses c ON e.course_id=c.course_id;
+    
+END$$
+DELIMITER ;
+CALL StudentswithCourses;
+
+DELIMITER $$
+CREATE PROCEDURE StudentsinCourses(IN course INT)
+BEGIN
+	SELECT s.student_id, s.name 
+    FROM Students s
+    JOIN enrollments e ON s.student_id=e.student_id
+    WHERE e.course_id=course;
+END$$
+DELIMITER ;
+CALL StudentsinCourses(102);
+
+
+DELIMITER $$
+CREATE PROCEDURE CountStudentsPerCourse()
+BEGIN
+	SELECT c.course_name, COUNT(e.student_id) AS student_count
+    FROM Courses c
+    LEFT JOIN enrollments e ON c.course_id=E.course_id
+    GROUP BY c.course_name;
+END$$
+DELIMITER ;
+CALL CountStudentsPerCourse;
+
+
+
