@@ -1,0 +1,22 @@
+db.students.insertMany([
+  {student_id: 2, name: "Priya", age: 21, city: "Delhi", course: "ML", marks: 85},
+{student_id: 3, name: "Arjun", age: 20, city: "Bengaluru", course: "Data Science", marks: 78},
+{student_id: 4, name: "Neha", age: 23, city: "Hyderabad", course: "AI", marks: 88},
+{student_id: 2, name: "Vikram", age: 21, city: "Chennai", course: "ML", marks: 95}])
+
+DELIMITER $$
+CREATE PROCEDURE ListAllCourses()
+BEGIN
+	SELECT * FROM Courses;
+END$$
+
+DELIMITER ;
+CALL ListAllCourses;
+
+DELIMITER $$
+CREATE PROCEDURE StudentsFromCity(IN city_name VARCHAR(50)) 
+BEGIN  
+	SELECT * FROM Students WHERE city=city_name; 
+    END$$
+DELIMITER ;
+CALL StudentsFromCity('Delhi');
