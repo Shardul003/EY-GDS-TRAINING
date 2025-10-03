@@ -1,0 +1,8 @@
+DELIMITER $$
+CREATE PROCEDURE ListAllCourses()
+BEGIN
+	SELECT * FROM Courses;
+END$$
+
+DELIMITER ;
+CALL ListAllCourses;
