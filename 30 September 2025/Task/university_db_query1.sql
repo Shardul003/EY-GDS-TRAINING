@@ -1,0 +1,8 @@
+DELIMITER $$
+CREATE PROCEDURE ListAllStudents()
+BEGIN
+	SELECT * FROM Students;
+END$$
+
+DELIMITER ;
+CALL ListAllStudents;
