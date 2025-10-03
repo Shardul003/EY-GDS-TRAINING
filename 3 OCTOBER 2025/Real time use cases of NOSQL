@@ -1,0 +1,32 @@
+Real world use cases to use nosql
+Retail
+Product catalogs: Document databases like MongoDB are perfect because they allow flexible attributes. Amazon, for example, uses DynamoDB to handle its ever-changing catalog.
+
+Recommendations: Graph databases (like Neo4j) map user relationships and purchase patterns to suggest products. Walmart leverages this for personalized shopping.
+
+Inventory in real-time: Key-value stores such as Redis are used to instantly check stock across thousands of warehouses.
+
+Banking
+Fraud detection: Graph databases can spot unusual connections in transactions that might indicate fraud. JP Morgan, for example, applies graph models for anti-money laundering.
+
+Real-time risk analysis: Column-family databases such as Cassandra can handle high-volume time-series data, which is crucial for instant risk reporting. Credit Suisse has used Cassandra in such scenarios.
+
+Social Media Platforms
+
+News feeds: Wide-column databases like Cassandra power feeds at Facebook and Instagram, enabling fast retrieval of posts.
+
+Connections and followers: Graph databases (Neo4j, Amazon Neptune) model the web of relationships, powering features like “People you may know” on LinkedIn.
+
+Messaging and notifications: Key-value databases such as Redis guarantee low-latency delivery of chats and push notifications. WhatsApp uses similar setups to manage billions of daily messages.
+
+Education
+
+
+Learning management systems: Document databases (MongoDB, Couchbase) can store course materials, quizzes, and videos without needing a fixed schema.
+
+Personalized learning: Graph databases map relationships between subjects, skills, and student progress to suggest what to study next. Coursera and Khan Academy use this kind of logic.
+
+Massive exams and assessments: Column-family databases like Cassandra handle millions of submissions at once, making large-scale testing possible.
+
+Engagement tracking: Combining MongoDB with analytics tools helps platforms understand how long students spend on lessons and where they struggle.
+
