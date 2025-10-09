@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Roster</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { color: #2a4d69; }
+    button { margin-bottom: 15px; }
+    li { margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <h1>Class Roster</h1>
+  <button id="fetchBtn">Show Students</button>
+  <ul id="roster"></ul>
+
+  <script>
+    document.getElementById("fetchBtn").addEventListener("click", getRoster);
+
+    async function getRoster() {
+      try {
+        const res = await fetch("http://127.0.0.1:8000/students");
+        const result = await res.json();
+        const names = result.students || [];
+        const listContainer = document.querySelector("#roster");
+        listContainer.innerHTML = "";
+
+        for (const person of names) {
+          const entry = document.createElement("li");
+          entry.textContent = `${person.name} — Grade ${person.grade}`;
+          listContainer.appendChild(entry);
+        }
+      } catch (err) {
+        console.error("Failed to load student data:", err);
+      }
+    }
+  </script>
+</body>
+</html>
