@@ -1,0 +1,15 @@
+RabbitMQ acts like a middleman between systems or services.
+It receives messages from one application (the producer) and delivers them to another (the consumer).
+Decouples systems (no direct dependency between services)
+
+Scales easily (many producers/consumers can connect)
+
+Reliable (ensures message delivery with acknowledgments and retries)
+
+Supports multiple protocols (like AMQP, MQTT, STOMP)
+Producer	Sends messages to RabbitMQ
+Queue	Stores messages until they are processed
+Consumer	Receives and processes messages
+Exchange	Routes messages to appropriate queues based on rules
+Binding	Defines the connection between an exchange and a queue
+software that helps different parts of a system communicate with each other asynchronously (without waiting for an immediate response).
