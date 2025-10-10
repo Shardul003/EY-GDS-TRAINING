@@ -37,5 +37,5 @@ Ensures no data loss and guaranteed message delivery.
 In real-time systems, data can arrive faster than it’s processed.
 A queue smooths out the spikes in traffic, preventing overloads.
 Example:
-A video streaming app collects user activity logs — a queue buffers those logs before writing to a database.
+A video streaming app collects user activity logs.
 
