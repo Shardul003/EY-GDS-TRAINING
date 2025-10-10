@@ -36,6 +36,11 @@ Ensures no data loss and guaranteed message delivery.
 4. Rate Control (Buffering)
 In real-time systems, data can arrive faster than it’s processed.
 A queue smooths out the spikes in traffic, preventing overloads.
-Example:
-A video streaming app collects user activity logs.
+
+Real-Time Event Streaming
+
+In complex systems (IoT, finance, analytics), queues act as event pipelines — ensuring ordered, reliable, real-time data flow.
+
+🧠 Example:
+Stock trading platforms use queues to handle massive real-time data streams from multiple sources without losing messages.
 
