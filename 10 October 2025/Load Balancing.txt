@@ -1,1 +1,39 @@
+Load Balancing is a technique used in distributed systems, cloud computing, and networking to distribute incoming traffic or workload evenly across multiple servers or resources.
+The main goal is to:
+Improve performance and scalability
+Prevent server overload
+Ensure high availability and reliability
 
+Common Load Balancing Strategies
+
+1. Round Robin
+
+Requests are distributed sequentially across servers in a circular manner.
+Simple and fair if servers have equal capacity.
+Best for: Homogeneous servers
+Use case: Requests are sent to servers in sequential order (A → B → C → A → …). | - When all servers have similar hardware and capacity. <br> - Simple web servers with equal load capacity. | Nginx, HAProxy, Apache HTTP Server.
+
+
+2.Weighted Round Robin
+
+Similar to round robin, but servers are assigned weights based on their capacity.
+
+A server with higher weight gets more requests.
+
+Best for: Servers with different processing power.
+
+use case: Servers are assigned weights based on capacity (e.g., CPU/RAM). Higher weight = more requests. | - When servers have different capacities. <br> - Hybrid clusters (e.g., one large server + two small ones). 
+3. Least Connections
+
+Directs new traffic to the server with the fewest active connections.
+
+Best for: Environments where connection times vary.
+use case- New requests go to the server with the fewest active connections. | - Chat apps, APIs, or streaming services with varying session durations.
+
+4. Weighted Least Connections
+
+Combines least connections with server weighting.
+
+A server’s load is adjusted based on both current connections and capacity.
+
+use case:-Combines server weights and current connection count to balance more intelligently. | - Real-time data systems or cloud workloads with mixed server power.
