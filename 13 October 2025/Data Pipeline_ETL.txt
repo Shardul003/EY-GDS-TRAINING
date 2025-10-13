@@ -1,6 +1,7 @@
 A data pipeline is a set of connected processes that collect, transform, and deliver data from multiple sources to a destination system for analysis or storage.
 
 Main Stages of a Data Pipeline
+
 1. Data Ingestion
 Collecting raw data from different sources such as:
 Databases (MySQL, PostgreSQL)
@@ -26,9 +27,9 @@ Machine Learning models
 Reports or APIs
 
 Types of Data Pipelines
-Batch Pipeline	Processes data in chunks or batches (e.g., every hour or day).	Daily sales reports, payroll data
-Streaming Pipeline	Processes data in real-time as it arrives.	Stock prices, IoT sensor data
-Hybrid Pipeline	Combines batch and streaming processes.	Real-time alerts + historical trend analysis
+1. Batch Pipeline	Processes data in chunks or batches (e.g., every hour or day).	Daily sales reports, payroll data
+2. Streaming Pipeline	Processes data in real-time as it arrives.	Stock prices, IoT sensor data
+3. Hybrid Pipeline	Combines batch and streaming processes.	Real-time alerts + historical trend analysis
 Example Flow
 
 E-commerce Data Pipeline:
