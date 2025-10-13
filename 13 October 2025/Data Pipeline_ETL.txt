@@ -46,3 +46,111 @@ Use Cases of Data Pipelines
 3. Predictive maintenance – IoT sensors send continuous data for real-time analysis.
 4. Social media monitoring – Stream tweets or posts to detect trends.
 5. Data lake creation – Collect and store all raw enterprise data for future ML/AI use.
+
+
+ETL stands for Extract → Transform → Load. It’s a classic data-integration pattern used to move data from source systems into a target system (usually a data warehouse or data mart) after cleaning and transforming it so it’s ready for analysis.
+1) High-level flow
+1. Extract — read data from source systems (databases, APIs, files, logs, IoT, etc.).
+2. Transform — clean, validate, enrich, convert types, join, aggregate, and apply business rules.
+3. Load — write the transformed data into the target (data warehouse, data lake, OLAP store).
+
+
+
+
+2) Extract — details
+
+Goal: get raw data out of sources reliably and with minimal impact.
+
+Source types: OLTP DBs (MySQL, Postgres), APIs, S3/Blob, CSV/Excel, message queues (Kafka), logs, SaaS (Salesforce), sensors.
+
+Methods:
+
+Full export: dump entire table/file (simple, heavy).
+
+Incremental / CDC (Change Data Capture): capture only changed rows (recommended for production). Tools: Debezium, native DB replication, or WAL-based readers.
+
+API pagination / offsets / webhooks: for SaaS sources.
+
+
+Considerations: authentication, rate limits, network latency, schema drift, consistent snapshots (transactions), and impact on source performance.
+
+
+
+---
+
+3) Transform — details (the core)
+
+Goal: convert raw data into clean, consistent, analytics-ready data.
+
+Types of transformations
+
+Data cleaning: remove duplicates, fix malformed records, normalize text/case.
+
+Type conversions: strings → dates, decimals, integers.
+
+Data enrichment: map codes to labels, lookup reference data, geocoding, add business attributes.
+
+Normalization / denormalization: split/join tables as needed.
+
+Filtering / validation: drop invalid rows or route them to a dead-letter queue.
+
+Aggregation: daily summaries, rollups, windowing functions.
+
+Business logic: revenue calculations, churn flags, segment assignment.
+
+Anonymization / masking: remove PII for privacy/compliance.
+
+Complex transformations: heavy joins, sessionization, event-time windows for streaming.
+
+
+Where transformation happens
+
+ETL (classic): transformations happen before load (in an ETL engine or staging area).
+
+ELT: load raw data first, then transform inside the data warehouse (e.g., Snowflake, BigQuery) using SQL — useful when warehouses are cheap/powerful.
+
+
+
+---
+
+4) Load — details
+
+Goal: persist transformed data into the destination in the correct schema and with correct integrity.
+
+Target types: data warehouse (Redshift, Snowflake, BigQuery), data lake (S3/HDFS), analytical DBs, OLAP cubes.
+
+Patterns:
+
+Upsert (merge): insert new rows + update existing (MERGE statement).
+
+Append-only: write new snapshots or event logs.
+
+Overwrite partitions: replace partitioned slices (e.g., daily partitions).
+
+
+Performance concerns: batch sizes, parallelism, write throughput, transactional consistency.
+
+Idempotency: jobs should be safe to retry without duplicating data. Use dedup keys/timestamps.
+
+
+
+---
+
+5) ETL vs ELT — when to use each
+
+ETL (transform before load) — good when:
+
+Target system is not powerful for heavy transformations.
+
+You must deliver clean, curated tables to downstream teams.
+
+Data must be transformed for compliance or to remove PII before entering target.
+
+
+ELT (load then transform in warehouse) — good when:
+
+You have a powerful data warehouse (Snowflake, BigQuery) so pushing transformations there is cheaper/faster.
+
+You want to keep raw data for reprocessing or reproducibility.
+
+You prefer SQL-based transformations and analytics-friendly tooling.
