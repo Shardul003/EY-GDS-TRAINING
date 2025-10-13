@@ -1,1 +1,47 @@
+A data pipeline is a set of connected processes that collect, transform, and deliver data from multiple sources to a destination system for analysis or storage.
 
+Main Stages of a Data Pipeline
+1. Data Ingestion
+Collecting raw data from different sources such as:
+Databases (MySQL, PostgreSQL)
+APIs (Twitter API, Weather API)
+Files (CSV, JSON, Excel)
+Sensors, IoT devices, or logs
+
+2.Data Processing / Transformation
+Cleaning, filtering, aggregating, and transforming the data into a usable format.
+Includes removing duplicates, handling missing values, and converting formats.
+Techniques:
+ETL (Extract, Transform, Load)
+
+3. Data Storage
+Processed data is stored for future analysis.
+Could be a data warehouse, data lake, or database.
+Examples: Amazon Redshift, Google BigQuery, Snowflake, Hadoop HDFS
+
+4. Data Consumption
+The final step where data is used for:
+Business Intelligence (BI) dashboards (Power BI, Tableau)
+Machine Learning models
+Reports or APIs
+
+Types of Data Pipelines
+Batch Pipeline	Processes data in chunks or batches (e.g., every hour or day).	Daily sales reports, payroll data
+Streaming Pipeline	Processes data in real-time as it arrives.	Stock prices, IoT sensor data
+Hybrid Pipeline	Combines batch and streaming processes.	Real-time alerts + historical trend analysis
+Example Flow
+
+E-commerce Data Pipeline:
+
+1. Data Sources → Website, Mobile App, Payment Gateway
+2. Ingestion → Collected using Kafka
+3. Processing → Cleaned & aggregated in Spark
+4. Storage → Loaded into Snowflake data warehouse
+5. Consumption → Visualized in Power BI dashboards
+Use Cases of Data Pipelines
+
+1. Real-time fraud detection – Streaming pipeline for banks.
+2. Customer analytics – Combine app, web, and CRM data into a single warehouse.
+3. Predictive maintenance – IoT sensors send continuous data for real-time analysis.
+4. Social media monitoring – Stream tweets or posts to detect trends.
+5. Data lake creation – Collect and store all raw enterprise data for future ML/AI use.
