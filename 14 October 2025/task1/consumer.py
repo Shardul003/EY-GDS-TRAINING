@@ -2,7 +2,6 @@ import time
 import random
 
 def consumer(q):
-    """Consumes items from the queue."""
     while True:
         item = q.get()
         if item is None:
