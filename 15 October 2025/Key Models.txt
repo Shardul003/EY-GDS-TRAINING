@@ -53,4 +53,14 @@ GPT internally processes like this:
 Identifying the most prominent idea — "sustainability policy".
 Identifying the key terms — obviously solar energy, and India.
 
-Then it searches its...
+🧠 GPT’s Capabilities vs. Limitations
+✅ Strengths
+Writes clearly and professionally	May produce outdated info (depends on training data)
+Understands context and tone	
+Can learn from examples	
+Works across languages and topics
+	⚠️ Limitations
+May produce outdated info (depends on training data)
+Doesn’t have emotions or consciousness
+Might “hallucinate” (generate plausible but false info)
+Needs clear prompts to give precise answers
