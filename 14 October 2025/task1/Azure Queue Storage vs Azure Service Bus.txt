@@ -1,1 +1,30 @@
+Azure Storage includes a straightforward and reasonably priced message queuing service. 
+It sends and receives messages using the HTTP/HTTPS protocols.
+It operates on a best-effort FIFO basis and does not guarantee strict message ordering.
+There is no integrated support for transactions or duplicate detection. 
+64 KB is the maximum message size. allows for at least one delivery, which implies that a message may be handled more than once.
+It does not have built-in dead-letter queues; manual error handling is required. 
+It lacks sophisticated routing and pub/sub models and only provides basic queueing features.
+It is less expensive and ideal for straightforward, decoupled communication between application elements.
+It is frequently utilised for lightweight message passing, task queues, and background job processing.
 
+
+An enterprise-grade messaging platform built for complex and large-scale communication scenarios.
+
+Primarily uses the AMQP protocol, but also supports HTTP for compatibility.
+
+Supports FIFO message delivery through sessions and message sequencing.
+
+Includes duplicate detection and transaction support for high reliability.
+
+Message size limits: up to 256 KB (Standard tier) and 1 MB (Premium tier).
+
+Offers at-least-once and exactly-once delivery guarantees, depending on configuration.
+
+Provides built-in dead-letter queues (DLQs) for handling undeliverable or failed messages.
+
+Supports advanced messaging features such as topics, subscriptions, message scheduling, and auto-forwarding.
+
+More feature-rich but costlier compared to Azure Queue Storage.
+
+Ideal for enterprise applications, financial systems, and microservice architectures requiring reliability and message control.
