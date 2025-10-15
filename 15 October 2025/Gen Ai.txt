@@ -52,3 +52,38 @@ Challenges & Ethical Concerns
 4. Transparency (hard to trace generated content origin)
 
 
+Text-based Generative AI is the ability of machines to generate human-like text — such as essays, emails, articles, code, poetry, or conversations — in response to prompts.
+
+How Text Generation Works (Simplified Flow)
+
+1. Input Prompt
+Example → “Explain how rainbows form.”
+
+
+2. Tokenization
+The text is broken into small pieces called tokens (like words or subwords).
+
+
+3. Embedding
+Each token is converted into a vector (numeric representation) so the model can understand relationships between words.
+
+
+4. Model Processing (Transformer Architecture)
+The transformer processes tokens using self-attention, understanding meaning and context.
+
+
+5. Prediction
+The model predicts the next word (token) based on previous context — one token at a time.
+
+
+6. Generation
+This process repeats until the model outputs a complete sentence, paragraph, or document.
+
+Evaluation Metrics
+
+Metric	Measures
+
+Perplexity	How well the model predicts next words (lower = better).
+BLEU / ROUGE / METEOR	Similarity to reference text (used in translation or summarization).
+Human Evaluation	Fluency, coherence, and factual correctness judged by humans.
+Toxicity / Bias Scores	Ensures outputs are safe and neutral.
