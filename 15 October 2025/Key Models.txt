@@ -1,0 +1,56 @@
+GPT----
+
+GPT stands for Generative Pre-trained Transformer — a type of Artificial Intelligence (AI) model developed by OpenAI that can understand and generate human-like text.
+
+Generative	It can create new content — sentences, stories, code, reports, etc.
+Pre-trained	It’s trained on a huge amount of text data before being fine-tuned for specific tasks.
+Transformer	The neural network architecture it uses, which enables it to understand context and relationships between words efficiently.
+
+GPT learns language through reading billions of examples of text — books, websites, papers, etc. It doesn't "remember" them; rather, it learns patterns, such as:
+What words tend to go together,
+How grammar operates,
+How tone and meaning change with context.
+When you query it, GPT:
+Interprets the input (by translating text into numerical tokens).
+Makes predictions about the most probable next word one at a time.
+Produces coherent text that is responsive to your prompt and tone.
+GPT is essentially an über-powered "autocompletion engine" that can guess the next word — but with vast contextual intelligence.
+ Concepts
+1. Transformer Model
+Utilizes a focus, known as attention, on the most significant words in a sentence to gain information.
+As an example: In “The bird flew over the river because it was wide.”, GPT knows that “it” refers to “river” and not “bird”.
+
+2. Tokens
+Text is then broken down into smaller pieces called tokens (a word, part of a word, or punctuation mark).
+GPT does not see “words” — it sees numbers that have been given to the different tokens.
+
+3. Parameters
+Parameters are essentially “neurons” or “connections” that the model has learned through the dataset.
+The more parameters, the better the model’s understanding and delivery of nuance.
+
+What can GPT do.
+GPT has had a broad range of abilities — often without any special programming.
+Written Text generative tasks.
+Articles, essays, poetry, social media posts, etc.
+Business tasks.
+ESG & sustainability reports (your job!).
+Summarizing reports, policies.
+Drafting stakeholder responses, or strategy.
+Technical.
+Writing and debugging code, and reviewing code snippets for errors.
+Teaching and explaining algorithms and computing science concepts.
+Education and Research.
+Writing summaries, research notes, and applying some structure to concepts.
+Simulating interviews or presentations.
+
+🗣️ Conversation.
+Chatbots, customer support, personal assistants, etc.
+
+🧮 An Example of how GPT is Thinking.
+If you were to say:
+“Write a sustainability policy for a solar energy company located in India”
+GPT internally processes like this:
+Identifying the most prominent idea — "sustainability policy".
+Identifying the key terms — obviously solar energy, and India.
+
+Then it searches its...
