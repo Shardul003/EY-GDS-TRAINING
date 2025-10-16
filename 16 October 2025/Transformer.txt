@@ -1,6 +1,6 @@
 TRANSFORMER--------------------------
 
-A Transformer is a type of neural network architecture introduced in 2017 (Vaswani et al., “Attention is All You Need”). It’s primarily used for processing sequences, like text, speech, or even time series.
+A Transformer is a type of neural network architecture  (“Attention is All You Need”). It’s primarily used for processing sequences, like text, speech, or even time series.
 The central idea of a Transformer is attention.
 Instead of processing words one by one, the model looks at all words in a sequence at once and decides which words are important for understanding a given word.
 This is called self-attention.
