@@ -1,0 +1,42 @@
+TRANSFORMER--------------------------
+
+A Transformer is a type of neural network architecture introduced in 2017 (Vaswani et al., “Attention is All You Need”). It’s primarily used for processing sequences, like text, speech, or even time series.
+The central idea of a Transformer is attention.
+Instead of processing words one by one, the model looks at all words in a sequence at once and decides which words are important for understanding a given word.
+This is called self-attention.
+ransformer Architecture
+
+A Transformer has two main parts:
+A. Encoder
+Reads the input sequence and converts it into a vector representation.
+Each encoder layer has:
+Self-Attention: Each word looks at every other word in the sequence.
+Feed-Forward Neural Network: Processes each word independently.
+Residual Connections & Layer Normalization: Helps with stability and gradient flow.
+
+B. Decoder
+Generates the output sequence (e.g., translation or next word prediction).
+Each decoder layer has:
+Masked Self-Attention: Looks at previously generated words (for autoregressive tasks).
+Encoder-Decoder Attention: Looks at the encoder output to align input with output.
+Feed-Forward Neural Network and normalization.
+
+4. Positional Encoding
+Transformers do not inherently know the order of words. To solve this:
+Positional Encoding is added to the input embeddings.
+It’s a vector that represents the position of a word in the sequence.
+This allows the model to understand the order of words.
+
+5. Advantages of Transformers
+
+Parallelizable → Faster than RNNs/LSTMs.
+Handles long sequences → Attention can relate distant words.
+Scalable → Can train very large models (billions of parameters).
+Versatile → Used for text, images, audio, and even multimodal tasks.
+
+6. Applications
+
+Language Models: GPT, BERT, T5
+Machine Translation: English → Hindi, etc.
+Text Summarization
+Question Answering
