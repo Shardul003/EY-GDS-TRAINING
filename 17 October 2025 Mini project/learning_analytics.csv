@@ -1,0 +1,14 @@
+Title,CompletionRate,Metric,Category,TotalStudents,Country,Enrollments,EnrollMonth,MonthlyEnrollments
+Cloud Fundamentals,0.0,CompletionRate,,,,,,
+Data Visualization with Power BI,0.0,CompletionRate,,,,,,
+Machine Learning Basics,0.0,CompletionRate,,,,,,
+Python for Beginners,1.0,CompletionRate,,,,,,
+,,TotalStudentsPerCategory,AI,2.0,,,,
+,,TotalStudentsPerCategory,Analytics,1.0,,,,
+,,TotalStudentsPerCategory,Cloud,1.0,,,,
+,,TotalStudentsPerCategory,Programming,2.0,,,,
+,,CountryWiseEnrollments,,,India,3.0,,
+,,CountryWiseEnrollments,,,UAE,1.0,,
+,,CountryWiseEnrollments,,,UK,1.0,,
+,,CountryWiseEnrollments,,,USA,1.0,,
+,,MonthlyEnrollmentTrends,,,,,2025-10,6.0
