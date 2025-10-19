@@ -1,7 +1,0 @@
-EnrollmentID,StudentID,CourseID,EnrollDate,Progress,Name,Email,Country,Title,Category,Duration,CompletionStatus,EnrollMonth
-E001,S001,C101,2025-10-01,80,Neha,neha@example.com,India,Python for Beginners,Programming,40,Completed,10
-E002,S002,C102,2025-10-02,60,Arjun,arjun@example.com,UAE,Machine Learning Basics,AI,60,In Progress,10
-E003,S003,C101,2025-10-03,100,Sophia,sophia@example.com,UK,Python for Beginners,Programming,40,Completed,10
-E004,S001,C103,2025-10-04,50,Neha,neha@example.com,India,Data Visualization with Power BI,Analytics,30,In Progress,10
-E005,S004,C104,2025-10-05,20,Ravi,ravi@example.com,India,Cloud Fundamentals,Cloud,50,In Progress,10
-E006,S005,C102,2025-10-06,75,Meena,meena@example.com,USA,Machine Learning Basics,AI,60,In Progress,10
