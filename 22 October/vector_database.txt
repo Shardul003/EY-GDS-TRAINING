@@ -1,0 +1,52 @@
+VECTOR DATABASE---------------------------------
+
+A Vector Database is a specialized type of database that can effectively store, index, and search high-dimensional vectors. These vectors typically correspond to unstructured data such as audio, video, text, etc., that has been transformed into a numerical embedding by a machine learning model.
+You could think about it this way:
+Instead of storing text or image data, a vector database stores the meaning — as a vector (list of numbers) that reflects the semantic relationships.
+📊 What Is a Vector (in This Context)?
+A vector is the numerical representation of data — an array of numbers that encapsulates the "essence" or representative features of that data.
+For example:
+The word “king” could be represented as [0.27, -0.34, 0.88, ...]
+The word "queen" could be represented as [0.25, -0.30, 0.90, ...]
+These vectors are in high-dimensional space (typically hundreds or thousands of dimensions). The distance between any two vectors (calculated by a metric such as cosine similarity or Euclidean distance) indicates how similar those data points are semantically.
+So:
+Distance(king, queen) < Distance(king, banana)
+→ King and Queen are semantically closer than King and Banana.
+
+
+Why do we need Vector database?
+  Normal database systems (be it SQL or NoSQL) work great for structured data — numbers, categories, text fields, things that can be queried right away. 
+But traditional databases are not good for semantic search or retrieving anything based on similarity. 
+
+For example: 
+With a normal database, you can get the exact match for "red shoes". 
+With a vector database, you can get comparable meanings like "maroon sneakers" or "burgundy loafers". 
+This gives value to vector databases that are used for AI and machine learning that are dependent on understanding meanings. 
+  
+Overview — Process Breakdown
+Data Collection
+Initially, unstructured information (e.g., text, image, audio) is directed into the embedding model.
+The embedding model (e.g., text-embedding-ada-003 from OpenAI, or CLIP in the case of images) takes in the data and generates numerical vectors.
+  
+Storage of Vectors
+The vectors are maintained in the vector database together with any relevant metadata (identification, tags, timestamps, etc.).
+
+  Indexing Process
+The vector database organizes the data in a manner that allows for fast nearest neighbor search by using a specialized indexing for vectors (e.g., HNSW, IVF, PQ).
+Finding Matches
+When you perform a query (e.g., “find documents that are similar to this paragraph”), the database will convert your query into a vector.
+The embedding model finds the closest vectors to your query utilizing one of several distance/judgment metrics, such as:
+1. Cosine Similarity
+2. Euclidean Distance
+3. Dot Product
+  
+Results
+  The database returns items with the highest similarity scores — the ones that are semantically closest to your query.
+
+  Common Use Cases
+Semantic Search	- Find documents, images, or videos similar in meaning, not just by keyword.
+Recommendation Systems	- Suggest products, songs, or content based on similarity in embedding space.
+Chatbots & RAG (Retrieval-Augmented Generation)	Retrieve relevant context from a knowledge base to help AI answer questions accurately.
+Image & Audio Search- 	Match visuals or sound clips based on similarity rather than metadata.
+
+The database will return the matches with the highest similarity scores — the items closest in semantic meaning to your query.
