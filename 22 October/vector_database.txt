@@ -50,3 +50,13 @@ Chatbots & RAG (Retrieval-Augmented Generation)	Retrieve relevant context from a
 Image & Audio Search- 	Match visuals or sound clips based on similarity rather than metadata.
 
 The database will return the matches with the highest similarity scores — the items closest in semantic meaning to your query.
+
+
+Popular Vector Databases
+Some widely used options include:
+	•	Pinecone
+	•	Weaviate
+	•	FAISS (Facebook AI Similarity Search)
+	•	Milvus
+	•	Chroma
+	•	Qdrant
