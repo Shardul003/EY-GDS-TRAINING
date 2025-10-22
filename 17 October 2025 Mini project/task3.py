@@ -17,6 +17,7 @@ merged['CompletionStatus'] = merged['Progress'].apply(lambda x: 'Completed' if x
 merged['EnrollMonth'] = pd.to_datetime(merged['EnrollDate']).dt.month
 
 # Step 3: Load
-merged.to_csv('processed_enrollments.csv', index=False)
+merged.to_csv('processedenrollments.csv', index=False)
+
 
 print("✅ ETL process completed. File saved as 'processed_enrollments.csv'.")
