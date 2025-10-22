@@ -1,30 +1,19 @@
 What Is RAG (Retrieval-Augmented Generation)?
-
 Retrieval-Augmented Generation (RAG) is a powerful AI architecture that combines two main components:
-
 Retrieval → Searching for relevant information from external data sources (documents, databases, web, PDFs, etc.)
-
 Generation → Using a large language model (LLM) (like GPT) to create natural language answers based on the retrieved information.
-
-🧠 In short:
-
+In short:
 RAG = “Search first, then generate.”
-
 It helps LLMs answer questions more accurately, using real-world, up-to-date, or private data, instead of relying only on what they were trained on.
+
 What is the Purpose of RAG?  
-
 Large language models (LLMs) like GPT and Gemini have been trained on large swaths of data from the internet but have some limitations.   
-
 Knowledge cut-off: LLMs do not know anything that occurred after a certain cut-off date.   
-
 Context window: LLMs can only “see” a certain number of tokens at a time.   
-
 Hallucination risk: The model may sometimes “make up” facts when it is not sure if something is correct.  
-
 RAG addresses these issues by connecting the LLM to some external sources of information, so the LLM can retrieve the fact for you.  
 
-🧩 The Main Building Blocks of a RAG System  
-
+ The Main Building Blocks of a RAG System  
 A typical RAG pipeline contains five main components:  
 
 1️⃣ Data Source / Knowledge Base  
@@ -37,110 +26,73 @@ CSV/Excel documents; etc.;
 These documents are pre-processed and stored to take up as little space as possible before you use them.  
 
 2️⃣ Chunking
-
 Since LLMs cannot read and process full-length `long` documents all in once, we subdivision (or chunk) documents into smaller pieces, typically between 300-1000 words with slight overlapping.
-
 For Example:
-
 A Document: 10 pages 
 ↓
 Chunk 1: Page 1-2 
 Chunk 2: Page 2-3 
 Chunk 3: Page 3-4 
 ... 
-
 The overlap page number ensures that no important context is lost between chunks.
 
 3️⃣ Embedding & Vector Store
-
 Once the documents are chunked, you convert each of those "chunks" into an embedding which is a numerical representation of the meaning of the text in a vector.
-
-🔹 Example: 
+Example: 
 “The sun is bright” → [0.12, 0.56, 0.44, …] 
 “The weather is sunny” → [0.11, 0.54, 0.45, …]
-
 More generally, semantic meaning is assigned to words so that words with similar meanings will appear similar in the vector format.
-
 You can store these vectors in a vector database which provides additional capabilities. Some examples of vector databases are:
-
-FAISS (by Facebook)
-
-Pinecone
-
-Weaviate
-
-Milvus
-
-Chroma
+1. FAISS (by Facebook)
+2. Pinecone
+3. Weaviate
+4. Milvus
+5. Chroma
 
 An important capability of a vector database is to support semantic search which means you are finding documents with similar meaning, rather than just keywords.
 
 4️⃣ Retriever
-
 When a user asks a question (this is the query step), RAG will convert the query into an embedding and then looks for document chunks in the vector database that are the most semantically similar. 
-
 For Example: 
 User: “What are Brillio's sustainability goals in 2024?” 
 Retriever will search for chunks in the Brillio 2023 ESG report that are about sustainability goals. 
-
 The retriever will typically return top-k relevant chunks (e.g., top 3-5).
-
-
-🧠 Example Scenario
-
+ Example Scenario
 Use case: An employee inquires with ChatGPT Enterprise:
-
 “What is our company’s paid leave policy?”
-
 Steps:
-
-The retriever searches the organization’s HR policy documents.
-
-The retriever finds chunks of text related to “leave policy” and “entitlements.”
-
-The LLM ingests those chunks and produces:
-
-“Based on the HR Policy 2024, full-time employees are entitled to 18 days of earned leave per year, accrued on a monthly basis.”
+1. The retriever searches the organization’s HR policy documents.
+2. The retriever finds chunks of text related to “leave policy” and “entitlements.”
+3. The LLM ingests those chunks and produces:
+4. “Based on the HR Policy 2024, full-time employees are entitled to 18 days of earned leave per year, accrued on a monthly basis.”
 
 ✅ Accurate
 ✅ Context-based
 ✅ Grounded in real company data
 
-🧮 Types of RAG
-1️⃣ Simple RAG (Retrieve → Generate)
 
+Types of RAG
+
+1️⃣ Simple RAG (Retrieve → Generate)
 Retrieve relevant text → Feed to LLM → Generate answer
 This is the simplest iteration of RAG and most common.
 
 2️⃣ RAG with Re-ranking
-
 Retrieve many chunks (e.g., top 20)
-
 Using another model (a re-ranker), use the ranking of the chunks to reorder the chunks’ relevance.
-
 Only feed the best few chunks to the LLM.
 
 3️⃣ Iterative RAG
-
 The LLM generates an intermediate query → retrieves more data → refines/refines answer.
 Can be useful in multi-hop reasoning or complex question answering.
-
 Benefits of RAG 
-
 ✅ Enhances factual accuracy - based on retrieval of data
 ✅ Tasks hallucination - the model can “quote” facts
 ✅ Scale that knowledge - external Dbs can hold millions of documents
 ✅ Customization - uses your private/domain-specific data
 ✅ Fresh knowledge that can be indexed - just re-index the new data, and no retraining is required
 
-
-
-
-
-
-
-
-⚠️ Challenges and Limitations
+ Challenges and Limitations
 
 ❌ Requires good data preprocessing and chunking
 ❌ Retrieval quality depends on embeddings & search tuning
@@ -149,23 +101,16 @@ Benefits of RAG
 ❌ Complex pipeline — needs orchestration, monitoring, caching
 
 
-
 What does the term "Flow" mean?
-
 In relation to contemporary LLM tooling, the term "Flow" is more or less synonymous with orchestration / pipelines of prompts, models, and tools -- i.e. how you design multi-step interactions. The term may vary across different platforms — prompting flow, chains, pipelines, workflows. The general idea is to treat LLM reasoning as a directed sequence (or graph) of some operations that involve retrieval, LLM calls, tool calls, conditionals, loops, and external I/O.
 
 Why do we favor flows?
-
 It breaks the complex task into smaller debuggable components. Stepping through debugging a complex workflow is typically preferable to debugging one giant black box model call.
-
 Logic: flows allow you to string multiple models/tools together e.g. a calculator, a DB, search, a planner, etc.
-
 To add control flow: branches, retries, loops, steps in parallel.
-
 Advisability, versioning and debugging steps.
 
  Flow Characteristics:
-
 - Input & validation — the ability to sanitize and validate user inputs.
 - Preprocessing — expand, normalize or convert queries, possible build in a call to a retriever.
 - Decision logic / branching - e.g. Is this a simple fact question (use RAG) or a coding task (use code-model + execution sandbox)?
@@ -175,36 +120,19 @@ Advisability, versioning and debugging steps.
 - Recommendations & testing hooks — check output of steps; save inference traces.
 
   Flow types / patterns
-
 Linear chain: step1 → step2 → step3 (basic pipelines).
-
 Branching flow: if condition → branch to one or a number of different flows.
-
 Looping flow: ask follow-up question until user confidence desired threshold level is achieved.
-
 Orchestrator + workers: main controller sends out sub-tasks (good to use for larger scale).
-
 Plan-and-execute (agentic): planner step generates subgoals, agent performs step (tool use + retrieval).
 
 Example cases of use
-
 Multi-step QA: retrieve docs → pull key facts → synthesis answer with citations.
-
 Complex form filling: extract user input → validate entries → fill out fields → confirm.
-
 Code + test generation: generating code → run tests in sandbox → if failed, ask LLM to debug → repeat.
-
 Customer support (chat-bot): classify intent → retrieve KB → answer, or escalate.
 
-
-
-
-
-
 How RAG and Flow work together
-
 A flow is the pipeline; RAG is one of the patterns/steps inside that pipeline.
-
 Example flow: user query → intent classifier → (if factual) RAG retriever → LLM synthesizer → postprocess/cite.
-
 Flows allow you to combine RAG with other capabilities (code execution, calculators, multi-turn memory) in a controlled way.
