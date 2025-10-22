@@ -60,3 +60,10 @@ Some widely used options include:
 	•	Milvus
 	•	Chroma
 	•	Qdrant
+
+Challenges
+
+❌ Storage requirements — High-dimensional data can be large.
+❌ Index updates — Rebuilding indexes for large datasets can be costly.
+❌ Approximation errors — Some searches are “approximate” for speed.
+❌ Complex setup — Requires tuning based on data scale and use case.
