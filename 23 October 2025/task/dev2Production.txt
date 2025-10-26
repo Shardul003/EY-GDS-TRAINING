@@ -1,0 +1,67 @@
+1. Development Environment (Dev)
+Purpose:  Used by developers to write, test, and debug code during the initial stages of software creation.
+Users:  Developers and engineers.
+Characteristics: Frequent code changes and feature implementations.
+Debugging tools and logs enabled.
+May use mock or minimal data.
+Unstable—focus is on functionality, not reliability.
+Example:  A developer tests new login API logic on their local machine or in a shared dev server.
+
+2. QA Environment (Quality Assurance)
+Purpose:  Dedicated for testing by the QA team to validate functionality, performance, and bug fixes.
+Users:  QA testers and automation engineers.
+Characteristics:  Code from the Dev environment is deployed here for testing.
+Automated and manual test cases are executed.
+Test data is used (not real production data).
+Focus is on finding defects early.
+Example:  QA verifies that new user registration works correctly and reports any bugs to developers.
+
+3. Staging Environment
+Purpose:  A near-identical copy of the production environment for final testing before release.
+Users:  Developers, QA, and DevOps teams.
+Characteristics:  Mirrors production configurations closely (servers, database, integrations).
+Used for final integration, regression, and performance testing.
+Acts as the last safety net before deployment to production.
+Example:  The entire app version is deployed here to ensure that deployments and APIs behave as expected under real conditions.
+
+4. UAT (User Acceptance Testing)
+Purpose:  Allows end-users or clients to verify if the system meets their business requirements.
+Users:  Business analysts, clients, or selected end-users.
+Characteristics:  Testing based on real-world business scenarios.
+Confirms readiness for production.
+Only minimal bug fixes should occur here.
+Usually managed by the QA or release team.
+Example:  The client tests the new “report generation” feature to confirm it meets agreed specifications.
+
+5. PPE (Pre-Production Environment)
+Purpose:  A final rehearsal before going live — often used to test deployment scripts, data migrations, and integrations.
+Users:  DevOps, release managers, and sometimes key business stakeholders.
+Characteristics:  Exact replica of production (hardware, software, and configurations).
+Validates deployment and rollback procedures.
+Monitors performance under realistic load conditions.
+Example:  Run a simulated production deployment and check all system components before the actual release.
+
+6. Production Environment
+Purpose:  The live environment where end-users access the actual application.
+Users:  Real customers or users.
+Characteristics:  Highly stable, secure, and monitored continuously.
+Only tested, approved code is deployed here.
+Real data is used.
+Changes are made through controlled CI/CD releases.
+Example:  The app version that users download or access online (e.g., Paytm’s live mobile app).
+
+⚙️ CI/CD Pipeline Overview
+CI (Continuous Integration)
+Developers frequently commit code to a shared repository (e.g., GitHub, GitLab).
+Automated build tools (like Jenkins, GitHub Actions, GitLab CI) compile and integrate code.
+Unit tests and static code analysis ensure new changes don’t break existing functionality.
+Fast feedback loop — developers are alerted of issues early.
+  
+CD (Continuous Delivery / Continuous Deployment)
+Continuous Delivery:
+Code is automatically built, tested, and prepared for deployment to staging/UAT.
+Deployment to production still requires manual approval.
+Continuous Deployment:
+Every code change that passes automated tests is automatically deployed to production.
+
+No manual intervention needed.
