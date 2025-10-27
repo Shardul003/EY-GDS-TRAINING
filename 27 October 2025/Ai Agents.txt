@@ -1,1 +1,110 @@
+An AI agent refers to a program or system that can sense its environment, decide, and act to achieve some goal - autonomously (by itself).
 
+Let’s break it down simply 👇
+
+🧠 Definition:
+
+An AI agent is:
+> “An intelligent agent that senses its environment, processes in formation, and acts to achieve a goal or maximize its success in some manner."
+
+---
+
+⚙️ Components of an AI Agent:
+
+1. Perception - It acquires data from the environment through sensors or inputs (e.g., camera, microphone, text data, etc.).
+
+2. Processing/Reasoning - It processes the data by analyzing it and cognitively applying algorithms or models to model the world in which it determines what it is going to do next.
+
+3. Action - It acts through actuators or outputs (e.g., sends a message, moves a robot arm, and updates a dashboard).
+
+4. Learning (optional but vital to AI) - It improves its performance in without being explicitly programmed, through past experience or feedback.
+
+Type	Example	Description
+
+
+Simple Reflex Agent	Thermostat	Only acts regarding current conditions (if too hot → turn off heater).
+Model-Based Agent	Self-driving car	Monitors the environment and updates internal maps.
+Goal-Based Agent	Chess-playing AI	Makes moves to achieve a goal (win the game).
+Utility-Based Agent	Recommendation system	Makes choices that maximize “happiness” or utility.
+Learning Agent	ChatGPT or Siri	Learns and improves based on data or user-based interactions.
+
+
+Different Types of Memory for AI Agents: 
+
+
+1. Short-Term Memory (STM): 
+
+
+Holds information that was acquired recently or temporarily. 
+Used for the purpose of making decisions that are needed immediately. 
+For example, this is how ChatGPT can remember what you typed earlier in this chat to keep the conversation flowing. 
+
+
+
+
+2. Long-Term Memory (LTM): 
+
+
+Stores knowledge or experience along a longer time scale. 
+Used for the purpose of building capabilities for performance in tasks or across sessions. 
+For example, a self-driving car can remember the layout of roads it drove on previously. 
+
+
+
+
+3. Episodic Memory: 
+
+
+Stores specifically what happened in and to a particular experience, or set of experiences. 
+For example, an AI is able to remember that, "turning left at this street causes traffic most of the time." 
+
+
+
+
+4. Semantic Memory: 
+
+
+Stores facts, rules, and "general" knowledge of the world. 
+For example, "red means stop," or "humans need oxygen."
+
+
+Why Memory Matters in AI Agents:
+
+Without Memory	With Memory
+
+Acts only on current input	Can use past experiences
+Repeats same mistakes	Learns and adapts
+No personalization	Can tailor responses or behavior
+Works reactively	Works intelligently and proactively
+
+
+
+What is Agentic AI?
+
+Agentic AI pertains to artificial intelligence systems which can take initiative to independently assess situations, find solutions, and take action towards an intended outcome without the need for constant instructions from a human.
+
+Core Capabilities of Agentic AI:
+
+1. Autonomy – Acts independently of supervision once instructed with a goal. 
+2. Reasoning – Can think through the steps that are needed to achieve that goal.
+3. Memory – Can remember actions taken and outcomes from prior actions.
+4. Learning – Improves through previous actions feedback and experience.
+5. Action-taking – Will take action to do something (e.g., run code, send emails, use tools).
+
+Example Scenarios:
+
+Example	What It Can Do 
+- An AI Coding Agent - Writes, tests, and debugs code autonomously (e.g., a GitHub Copilot Agent).
+- Customer Support Agent - Reads user presented issues, researches the database, thinks through a response, and either replies or escalates.
+- AI Research Agent - Reads papers online, summarizes findings, and updates its knowledge base.
+- An Automation Agent such as AutoGPT or BabyAGI - Thinks through its own subgoals, takes action to complete tasks, examines outcomes, and will continue until the overall goal is complete.
+
+Agentic AI is the next big step — enabling systems that can:
+
+Manage tasks end-to-end
+
+Coordinate multiple AIs or APIs
+
+Learn from real-world feedback
+
+Work like digital employees or assistants
