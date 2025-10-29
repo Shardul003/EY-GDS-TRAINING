@@ -1,0 +1,15 @@
+LangChain is a powerful framework designed to help developers build applications that integrate language models with external data sources, tools, and workflows. It's especially useful for creating AI agents, chatbots, retrieval-augmented generation (RAG) systems, and autonomous decision-making tools.
+We can build with LangChain:
+- Chatbots that use custom data (PDFs, websites, databases)
+- AI agents that can use tools like calculators, search engines, or APIs
+- RAG systems that combine LLMs with search or vector databases
+- Workflow automation using chains of reasoning and decision-making
+- Custom prompt engineering and memory management
+
+ Example Use Case
+Here’s a simple example: a chatbot that answers questions based on a PDF.
+- Load the PDF using langchain.document_loaders.
+- Split it into chunks with langchain.text_splitter.
+- Embed chunks using langchain.embeddings.
+- Store them in a vector database like FAISS or Chroma.
+- Use a RetrievalQA chain to answer questions using the stored chunks.
