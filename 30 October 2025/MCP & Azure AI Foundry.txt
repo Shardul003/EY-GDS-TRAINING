@@ -1,1 +1,41 @@
+What is Multi Agent Coordination?
+The Multi-Agent Coordination Pattern (MCP) is a design paradigm focused on defining how multiple autonomous agents communicate, cooperate, and coordinate actions to collectively achieve a goal, often in a distributed or dynamic environment. 
+
+It provides a means for agents to:
+
+- Share information
+- Avoid conflict or duplication of work
+- Make decisions based on local and global goals
+- Adapt to changes in the environment or in other agents in real time
+
+2. The Need for Coordination
+
+In multi-agent systems (MAS), each agent:
+
+- Operates independently (has its own goals, beliefs, and reasoning),
+- Interacts with other agents in the same environment. 
+
+In the absence of coordination problems, "Tasks will be duplicated (two agents doing the same thing), conflicts over resources (two agents want the same resource), deadlock or inefficiency (agents are waiting on each other to finish a task), and inconsistent world views (the agents think different things are true regarding the environment)." 
+
+The MCP provides structured coordination mechanisms to address issues such as these.
+
+3. Core Components of MCP
+
+Component
+Description
+
+Agent
+An autonomous entity that can sense, reason, and act.
+
+Coordinator / Mediator
+A component that may facilitate communication or synchronization among agents.
+
+Shared Knowledge Base (Blackboard)
+Common space for agents to post and read information of interest.
+
+Communication Protocol
+Defines how agents send messages, i.e., what is a message, how to serialize it, how to identify—and reach—agents, etc.
+
+Coordination Strategy
+Rules or algorithms that establish how agents will align their tasks and resolve...
 
