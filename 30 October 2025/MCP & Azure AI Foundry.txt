@@ -38,4 +38,59 @@ Defines how agents send messages, i.e., what is a message, how to serialize it, 
 
 Coordination Strategy
 Rules or algorithms that establish how agents will align their tasks and resolve...
+4. Coordination Strategies (Patterns)
 
+Several Coordination Strategies are employed in practicing MCP:
+
+a) Centralized Coordination
+
+A master agent or coordinator specifies and allocates tasks.
+
+For example, task allocation among a fleet of warehouse robots that is coordinated by an AI that makes decisions on whose job is next.
+
+Pros: Easier control, potential to optimize globally
+
+Cons: Single point of failure, scale limits
+
+b) Decentralized Coordination
+
+Agents negotiate among themselves, and coordinate directly, without a centralized controller.
+
+For example, a swarm of robots, or a group of drones, that self-organizes to cover an area.
+
+Pros: Scalable, fault-tolerant
+
+Cons: Harder to obtain global optimum, has to negotiate complex goals
+
+c) Market-Based (Economic) Coordination
+
+Agents act as buyers and sellers in a digital marketplace, bidding to accomplish a certain task or gain access to scarce resources.
+
+For example, deploying distributed computing nodes that bid to process tasks.
+
+Pros: Dynamic and efficient resource allocation
+
+Cons: Requires well defined utility and pricing models
+
+d) Contract Net Protocol (CNP)
+
+A manager agent announces a job → other agents bid on the job → the agent with the best bid wins the job.
+
+This is a model that is widely used in task allocation in multi-agent implementations.
+
+e) Behavioral or Social Coordination
+
+Agents coordinate along lines defined by roles, norms, or social commitments.
+
+For example, traffic-management agents that are following agreed-to rules for what to do in an intersection. 
+
+5. MCP in Agentic AI Systems
+
+In agentic AI (AutoGPT, CrewAI, or SwarmGPT), MCP defines:
+
+
+
+How agentic AI planner, executor, and critic agents share context
+
+
+How they
