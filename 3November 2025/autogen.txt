@@ -25,3 +25,53 @@ How an AutoGen workflow typically looks (high level)
 
 
 4. Inspect & debug using logs or AutoGen Studio; optionally add human-in-the-loop steps. 
+
+Standard use cases
+
+
+Multi-agent collaboration on complex tasks (planning + verification + using tool). 
+
+
+Automation of business processes via deterministic or dynamic workflows. 
+
+
+Research into collaboration among agents and emergent behaviour (both papers and experiments are using AutoGen). 
+
+
+No-code prototyping and debugging of systems of agents via AutoGen Studio. 
+
+
+
+
+
+
+---
+
+
+6) Strengths and weaknesses 
+
+
+Strengths
+
+
+Designed for multi-agent patterns (not for wrapping just a single LLM). 
+
+
+Extensible: pluggable LLM clients, tools, vector DBs, function-calls. 
+
+
+Has both code-first (Python APIs) and low-code (Studio) interfaces. 
+
+
+
+
+Weakness / things to consider
+
+
+More software architecture complexity than single-agent libraries (you need to think about orchestration, error handling, cost control). 
+
+
+Operational concerns (like latency, model costs, monitoring) become important with a multi-agent. 
+
+
+The ecosystem is fast evolving — there are similar frameworks (LangChain, Semantic Kernel, and newer Microsoft Agent Framework) so pick based on your needs 
