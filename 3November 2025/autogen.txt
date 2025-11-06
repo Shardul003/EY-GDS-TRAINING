@@ -13,3 +13,15 @@ Agent / ConversableAgent: a self contained unit (name, role, LLM client, tools, 
 AgentChat / Multi-agent conversation: a chatroom where one or more agents (optionally humans) send and receive messages; AutoGen manages the flow and turn taking. 
 Core (event-driven runtime): an event driven architecture that allows for asynchronous, distributed, and scalable agent workflows. Useful as a deterministic pipeline or can be used for dynamic agent creation. 
 AutoGen Studio: a low code/no code web UI for agent prototyping, debugging and composition - excellent for rapid prototyping and no technical knowledge.
+How an AutoGen workflow typically looks (high level)
+
+1. Define agents (roles, model clients, tools, initial prompts). 
+
+
+2. Compose a conversation or workflow (who can talk to whom; trigger conditions). 
+
+
+3. Run the system in an event-driven runtime — agents exchange messages, call tools, update memory/state, and the orchestrator manages retries/timeouts/ordering. 
+
+
+4. Inspect & debug using logs or AutoGen Studio; optionally add human-in-the-loop steps. 
