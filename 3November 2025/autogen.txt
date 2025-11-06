@@ -1,1 +1,15 @@
-What is Autogen 
+What is Autogen?
+AutoGen is a programming framework from Microsoft that is open-source and useful for developing agentic AI. This is a large language model (LLM) powered agent or agents that talk to one another, call tools, retain state, and manage an autonomous or human-in-the-loop multi-step workflow.
+
+---
+
+1) High-level objectives
+AutoGen's goal is to easily design, compose, test, and run single and multi-agent applications where an agent is a reusable, tested component (an LLM + optional tools human interface). It allows for conversational behaviors (agent chat), tool usage (function calls, and code execution), state / memory, and deterministic or dynamic orchestration of business or research workflows.
+
+---
+
+2) Core ideas and elements 
+Agent / ConversableAgent: a self contained unit (name, role, LLM client, tools, description) where each unit can sent / received, retain a conversational history, and respond to a set task. 
+AgentChat / Multi-agent conversation: a chatroom where one or more agents (optionally humans) send and receive messages; AutoGen manages the flow and turn taking. 
+Core (event-driven runtime): an event driven architecture that allows for asynchronous, distributed, and scalable agent workflows. Useful as a deterministic pipeline or can be used for dynamic agent creation. 
+AutoGen Studio: a low code/no code web UI for agent prototyping, debugging and composition - excellent for rapid prototyping and no technical knowledge.
