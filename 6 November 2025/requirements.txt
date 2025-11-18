@@ -1,0 +1,14 @@
+langchain
+langchain-core>=0.2.23
+langchain-community>=0.2.10
+langchain-text-splitters>=0.2.2
+langchain-groq>=0.1.5
+python-dotenv>=1.0.1
+streamlit>=1.36.0
+pypdf>=4.2.0
+huggingface-hub>=0.23.0
+sentence-transformers>=2.6.1
+faiss-cpu ; platform_system != "Windows"
+# Windows wheel source for FAISS:
+--extra-index-url https://download.pytorch.org/whl/cpu
+faiss-cpu ; platform_system == "Windows"
